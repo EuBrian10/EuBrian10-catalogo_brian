@@ -58,7 +58,82 @@ iframe {
 .card p {
     color: #ccc;
 }
+/* === SEÇÃO DE RECOMENDADOS === */
 
+#recomendados {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+#recomendados h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* container horizontal */
+#recomendados .cards-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+/* estilização dos cards */
+#recomendados .card {
+    min-width: 250px;
+    background-color: #111;
+    border-radius: 10px;
+    padding: 15px;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+    transition: transform .2s;
+}
+
+#recomendados .card:hover {
+    transform: scale(1.05);
+}
+
+/* imagens dos recomendados (caso use imagem) */
+#recomendados .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* título */
+#recomendados .card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+/* descrição */
+#recomendados .card p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+/* botão */
+#recomendados .card .btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: red;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .2s;
+}
+
+#recomendados .card .btn:hover {
+    background-color: #b40000;
+}
 footer {
     text-align: center;
     padding: 20px;
