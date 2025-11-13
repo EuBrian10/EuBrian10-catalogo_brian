@@ -58,81 +58,55 @@ iframe {
 .card p {
     color: #ccc;
 }
-/* === SEÇÃO DE RECOMENDADOS === */
+/* ======== SEÇÃO DE RECOMENDADOS ======== */
 
-#recomendados {
+.recomendados {
     margin-top: 40px;
-    padding: 20px;
 }
 
-#recomendados h2 {
+.recomendados h2 {
+    color: red;
     font-size: 28px;
-    margin-bottom: 20px;
-    color: #ffffff;
-    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
-/* container horizontal */
-#recomendados .cards-container {
+/* Fila horizontal estilo Netflix */
+.fila-videos {
     display: flex;
     gap: 20px;
     overflow-x: auto;
     padding-bottom: 10px;
-    scroll-behavior: smooth;
+
+    /* Deixa a barra de rolagem invisível */
+    scrollbar-width: none; 
+}
+.fila-videos::-webkit-scrollbar {
+    display: none;
 }
 
-/* estilização dos cards */
-#recomendados .card {
-    min-width: 250px;
-    background-color: #111;
-    border-radius: 10px;
-    padding: 15px;
-    flex-shrink: 0;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
-    transition: transform .2s;
+/* Cada card */
+.rec-card {
+    min-width: 300px;       /* tamanho horizontal fixo para ficar tipo cards Netflix */
+    flex-shrink: 0;         /* impede de encolher */
+    text-align: left;
 }
 
-#recomendados .card:hover {
-    transform: scale(1.05);
-}
-
-/* imagens dos recomendados (caso use imagem) */
-#recomendados .card img {
+/* Vídeo */
+.rec-card iframe {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
+    height: 170px;
     border-radius: 8px;
-    margin-bottom: 10px;
+    border: 2px solid red;
 }
 
-/* título */
-#recomendados .card h3 {
-    font-size: 18px;
-    margin-bottom: 8px;
-    color: #fff;
-}
-
-/* descrição */
-#recomendados .card p {
-    font-size: 14px;
-    color: #ccc;
-    margin-bottom: 10px;
-}
-
-/* botão */
-#recomendados .card .btn {
-    display: inline-block;
-    padding: 8px 12px;
-    background-color: red;
-    color: #fff;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: .2s;
-}
-
-#recomendados .card .btn:hover {
-    background-color: #b40000;
+/* Título abaixo dos vídeos */
+.rec-card p {
+    margin-top: 8px;
+    font-size: 16px;
+    color: red;
+    font-weight: 500;
+}: 500;
 }
 footer {
     text-align: center;
